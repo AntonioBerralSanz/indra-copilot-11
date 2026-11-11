@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Estudio creativo independiente. Diseñamos experiencias digitales con ideas que dejan huella.">
+  <title>norte — ideas que avanzan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="norte, inicio">
+      <span class="brand-mark" aria-hidden="true">n.</span>
+      <span>norte<span class="brand-period">.</span></span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+      <a href="#estudio">Estudio</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+      <a class="nav-cta" href="mailto:hola@norte.studio">Hablemos <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> Estudio creativo independiente</p>
+        <h1>Ideas con<br>rumbo <span class="serif-word">propio.</span></h1>
+        <div class="hero-bottom">
+          <p>Construimos marcas y experiencias digitales para quienes quieren mover las cosas hacia delante.</p>
+          <a class="round-link" href="#estudio" aria-label="Descubre el estudio"><span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Composición abstracta de formas de colores">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-sun"></div>
+        <div class="art-shape"></div>
+        <span class="art-note note-top">EST. 2021</span>
+        <span class="art-note note-bottom">40° 25' 01.2" N</span>
+        <span class="art-star" aria-hidden="true">✳</span>
+      </div>
+      <span class="hero-index">01 — 03</span>
+    </section>
+
+    <section class="intro section-pad" id="estudio">
+      <p class="eyebrow">01 / Lo que nos mueve</p>
+      <div class="intro-content">
+        <h2>El futuro no se espera.<br><span>Se diseña.</span></h2>
+        <div class="intro-aside">
+          <p>Somos un estudio pequeño con ideas grandes. Unimos estrategia, diseño y tecnología para crear cosas que importan.</p>
+          <a class="text-link" href="#contacto">Conoce nuestra forma de trabajar <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="work section-pad" id="proyectos">
+      <div class="section-heading">
+        <p class="eyebrow">02 / Trabajo seleccionado</p>
+        <span class="muted-label">2023 — 2025</span>
+      </div>
+      <div class="project-grid">
+        <a class="project-card project-large" href="#contacto">
+          <div class="project-visual visual-one">
+            <span class="visual-word word-one">VIVO</span>
+            <span class="visual-orb"></span>
+            <span class="visual-caption">Una nueva energía<br>para lo cotidiano.</span>
+          </div>
+          <div class="project-info">
+            <div><h3>Vivo Botanicals</h3><p>Identidad · Dirección de arte</p></div>
+            <span class="project-arrow" aria-hidden="true">↗</span>
+          </div>
+        </a>
+        <a class="project-card" href="#contacto">
+          <div class="project-visual visual-two">
+            <span class="visual-word word-two">forma<br>libre.</span>
+            <span class="visual-lines" aria-hidden="true"></span>
+            <span class="visual-caption">Espacios para<br>nuevas ideas.</span>
+          </div>
+          <div class="project-info">
+            <div><h3>Forma Libre</h3><p>Estrategia · Digital</p></div>
+            <span class="project-arrow" aria-hidden="true">↗</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="contact section-pad" id="contacto">
+      <p class="eyebrow">03 / El siguiente paso</p>
+      <div class="contact-content">
+        <h2>¿Y si lo<br>hacemos <span>real?</span></h2>
+        <a class="contact-link" href="mailto:hola@norte.studio">
+          <span>Cuéntanos tu idea</span>
+          <span class="contact-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <div class="contact-meta">
+        <span>Madrid · En todas partes</span>
+        <a href="mailto:hola@norte.studio">hola@norte.studio</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">n.</span><span>norte<span class="brand-period">.</span></span></a>
+    <span>© <span id="year"></span> norte studio</span>
+    <a href="#inicio">Volver arriba ↑</a>
+  </footer>
+
+  <aside class="clock-widget" aria-label="Reloj analógico">
+    <span class="clock-label">HORA LOCAL</span>
+    <div class="clock-face" role="img" aria-label="Reloj analógico con la hora actual">
+      <span class="clock-tick tick-12"></span>
+      <span class="clock-tick tick-3"></span>
+      <span class="clock-tick tick-6"></span>
+      <span class="clock-tick tick-9"></span>
+      <span class="clock-hand clock-hour"></span>
+      <span class="clock-hand clock-minute"></span>
+      <span class="clock-hand clock-second"></span>
+      <span class="clock-pin"></span>
+    </div>
+    <span class="clock-city">MADRID · CET</span>
+  </aside>
+</body>
+</html>
+
+
+
+
+
