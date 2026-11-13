@@ -1,0 +1,13 @@
+name: Saludo
+
+on:
+  push:
+
+jobs:
+  Saludar:
+    runs-on: ubuntu-laslest
+
+    steps:
+      - name: Mostrsr Saludo
+        run:echo "¡Hola mundo!"
+
