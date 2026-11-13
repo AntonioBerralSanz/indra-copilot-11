@@ -33,12 +33,15 @@ a {
 }
 
 .site-header {
+  position: relative;
+  z-index: 10;
   height: 82px;
   padding: 0 7.1%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--line);
+  background: var(--paper);
 }
 
 .brand {
@@ -47,6 +50,11 @@ a {
   gap: 9px;
   font: 700 20px var(--display);
   letter-spacing: -1px;
+  transition: opacity 180ms ease;
+}
+
+.brand:hover {
+  opacity: .76;
 }
 
 .brand-mark {
@@ -58,6 +66,11 @@ a {
   color: var(--lime);
   border-radius: 50%;
   font-size: 15px;
+  transition: transform 180ms ease;
+}
+
+.brand:hover .brand-mark {
+  transform: rotate(-10deg);
 }
 
 .brand-period {
@@ -67,30 +80,60 @@ a {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 38px;
+  gap: 32px;
   font-size: 13px;
 }
 
-.site-nav a:not(.nav-cta),
+.site-nav a:not(.nav-cta) {
+  position: relative;
+  padding: 10px 0;
+  color: #55584f;
+  transition: color 180ms ease;
+}
+
+.site-nav a:not(.nav-cta)::after {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  left: 0;
+  height: 1px;
+  background: var(--orange);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+.site-nav a:not(.nav-cta):hover {
+  color: var(--ink);
+}
+
+.site-nav a:not(.nav-cta):hover::after {
+  transform: scaleX(1);
+}
+
 .site-footer a {
   transition: opacity 180ms ease;
 }
 
-.site-nav a:not(.nav-cta):hover,
 .site-footer a:hover {
   opacity: .58;
 }
 
 .nav-cta {
   padding: 12px 17px;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--lime);
   border-radius: 30px;
-  transition: background 180ms ease, color 180ms ease;
+  background: var(--lime);
+  font-weight: 600;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
 .nav-cta:hover {
   background: var(--ink);
+  border-color: var(--ink);
   color: var(--paper);
+  transform: translateY(-2px);
 }
 
 .nav-cta span {
@@ -713,16 +756,26 @@ p {
   .site-nav {
     position: absolute;
     z-index: 5;
-    top: 71px;
+    top: 100%;
     left: 0;
     right: 0;
-    padding: 23px 6% 27px;
+    padding: 16px 6% 24px;
     display: none;
     align-items: stretch;
     flex-direction: column;
-    gap: 20px;
+    gap: 4px;
     border-bottom: 1px solid var(--line);
     background: var(--paper);
+    box-shadow: 0 16px 24px rgba(32, 35, 31, .08);
+  }
+
+  .site-nav a:not(.nav-cta) {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .site-nav a:not(.nav-cta)::after {
+    display: none;
   }
 
   .site-nav.is-open {
@@ -731,6 +784,7 @@ p {
 
   .nav-cta {
     align-self: flex-start;
+    margin-top: 12px;
   }
 
   .hero {
